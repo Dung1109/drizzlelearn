@@ -16,7 +16,6 @@ export const addTodo = async (id: number, text: string) => {
 export const getData = async () => {
     const data = await db.select().from(todo).orderBy(asc(todo.id));
     return data;
-    revalidatePath("/");
 };
 
 export const editTodo = async (id: number, text: string) => {
